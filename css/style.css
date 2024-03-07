@@ -35,6 +35,13 @@
 ul,
 ol {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid var(--CORNFLOWER, #E7E9FC);
+        background: var(--WHITE, #FFF);
 }
 
 a {
@@ -47,6 +54,12 @@ button {
 
 address {
     font-style: normal;
+    margin-left: auto;
+}
+
+.address-list {
+    display: flex;
+    gap: 40px;
 }
 
 body {
@@ -55,15 +68,32 @@ body {
     color: #434455;
 }
 
+.container {
+    width: 1158px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.page-nav {
+    display: flex;
+    align-items: center;
+}
+
 /*--header--*/
 .logo-part-first {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #4d5ae5;
+        font-family: Raleway;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: 0.54px;
+        text-transform: uppercase;
+        margin-right: 76px;
 }
 
 .logo-part-second {
@@ -74,6 +104,12 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #2e2f42;
+    margin-right: 76px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 40px;
 }
 
 .menu-link {
@@ -83,6 +119,8 @@ body {
     letter-spacing: 0.02em;
     color: #2e2f42;
     background-color: #fff;
+    padding: 24px;
+    display: block;
 }
 
 .menu-link:hover,
@@ -105,35 +143,71 @@ body {
 /*--section-first--*/
 .section-first {
     background-color: #2e2f42;
+    padding: 188px 0;
+
 }
 
 .caption {
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        max-width: 496px;
+        margin-bottom: 48px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 1.07143;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #fff;
 }
 
 .button {
-    font-family: inherit;
-    color: #ffffff;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    text-align: center;
-    background-color: #4d5ae5;
-    cursor: pointer;
+        background: #4d5ae5;
+            color: #fff;
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: 0.04em;
+            display: block;
+            margin: 0 auto;
+            padding: 16px 32px;
+            gap: 10px;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+            min-width: 169px;
+            height: 56px;
+            display: block;
+            align-items: center;
+            cursor: pointer;
 }
 
-.button:hover,
+
 .button:focus {
     background: #404bbf;
 }
 
+.button:hover {
+    background: #404bbf;
+}
+
 /*--section-second--*/
+
+.section-our-benefits {
+    padding: 120px 0;
+}
+
+.benefits-list{
+    display: flex;
+    gap: 24px;
+}
+
+.benefits-list-item{
+    width: calc((100% - 72px) / 4);
+}
 
 .caption-benefits {
     font-weight: 500;
@@ -141,23 +215,35 @@ body {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .description-benefits {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    color: #434455;
 }
 
 /*-- section-third--*/
 
 .section-our-team {
-    background-color: #f4f4fd;
+    background: var(--CLOUD, #F4F4FD);
     text-align: center;
+    padding: 120px 0;
+}
+
+.team-ul {
+    display: flex;
+    gap: 24px;
 }
 
 .team-list {
     background-color: #ffffff;
+    gap: 24px;
+    border-radius: 0px 0px 4px 4px;
+     background: var(--WHITE, #FFF);
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .collective-name {
@@ -166,6 +252,21 @@ body {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.visually-hidden {
+    position: relative;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .caption-team {
@@ -186,6 +287,12 @@ body {
 
 /*-- section-third--*/
 
+.section-our-portfolio {
+    background: #FFF;
+    width: 1440px;
+    height: 3300px;
+}
+
 .caption-portfolio {
     font-weight: 700;
     font-size: 36px;
@@ -193,7 +300,29 @@ body {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: #2e2f42;
+    text-align: center;
 }
+
+.Portfolio-list {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    text-align: left;
+    row-gap: 48px;
+}
+
+.Portfolio-list-item {
+    width: calc((200% - 96px) / 6);
+}
+
+.section-our-portfolio-img {
+    width: 360px;
+    height: 300px;
+    flex-shrink: 0;
+    background: url(<path-to-image>), lightgray -25.026px 0px / 125% 100% no-repeat;
+}
+
+
 
 .caption-name {
     font-weight: 500;
@@ -242,3 +371,4 @@ footer {
     letter-spacing: 0.02em;
     color: #f4f4fd;
 }
+

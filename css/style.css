@@ -133,7 +133,7 @@ img {
     color: #fff;
 }
 
-.Effective {
+.effective {
     background: #2e2f42;
     padding: 188px 0;
 }
@@ -316,8 +316,8 @@ img {
 }
 
 .portfolio-title-text {
-    padding: 32px 16px;
     border-top: none;
+    padding: 32px 16px;
     border: 1px solid #e7e9fc;
 }
 

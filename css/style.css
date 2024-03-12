@@ -197,7 +197,7 @@ img {
     width: calc((100% - 72px) / 4);
 }
 
-.benefits-list-h3 {
+.benefits-list-h {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
